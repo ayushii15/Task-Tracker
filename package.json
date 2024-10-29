@@ -1,7 +1,7 @@
 {
-  "homepage": "https://ayushii15.github.io/task-tracker/",
-  "name": "task-tracker",
+ "name": "task-tracker",
   "version": "0.1.0",
+  "homepage": "https://ayushii15.github.io/Task-Tracker/",
   "private": true,
   "dependencies": {
     "18": "^0.0.0",
