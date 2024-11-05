@@ -7,9 +7,10 @@
     display: flex;
     justify-content: flex-end; 
     margin-top: 15px; 
+    margin-left: 1rem;
 }
 .create-task-button:hover {
-    background-color: #0056b3;
+    background-color: rgb(246, 206, 149);
 }
 
 .form-overlay {
@@ -27,7 +28,7 @@
 
 
 .form-container {
-    background: white;
+    background: rgb(212, 246, 255);
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -51,7 +52,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #f7f9fc;
+    background-color: rgb(198, 231, 255);
     border-bottom: 2px solid #e0e6ed;
 }
 .username{
@@ -61,20 +62,21 @@
 
 .logout-button {
     position: relative;
-    margin-right: 0rem;
     background-color: rgb(219, 45, 45);
     color: white;
     padding: 5px;
     width: 50%;
     text-align: center;
     cursor: pointer;
-    border-radius: 8px 8px 8px 8px;
-    transition: opacity 0.3s ease;
+    border-radius: 8px ;
+    margin-left: auto; /* Pushes the logout button to the far right */
+    transition: background-color 0.3s ease; /* Smooth background color change on hover */
+    opacity: 1; /* Set to always visible */
+    display: block; /* Ensure it's always shown */
 }
 
-.user-info:hover .logout-button {
-    display: block;
-    opacity: 1;
+.logout-button:hover {
+   background-color: #ad1d1d;
 }
 
 .dashboard-title {

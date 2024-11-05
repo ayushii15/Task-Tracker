@@ -1,3 +1,9 @@
+.table-container {
+    overflow-x: auto; /* Enables horizontal scrolling when needed */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile devices */
+    margin-top: 15px; /* Space above the table */
+}
+
 .controls-container {
     display: flex;
     justify-content: flex-end;
@@ -14,25 +20,24 @@
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 15px;
-    overflow-x: auto; /* Enable horizontal scroll */
+    min-width: 800px; 
 }
 
 th, td {
     padding: 12px 20px;
     text-align: left;
-    border: 1px solid #ddd;
+    border: 1px solid rgb(255, 221, 174);
     vertical-align: middle;
 }
 
 th {
-    background-color: #f4f4f9;
+    background-color: rgb(212, 246, 255);
     color: #333;
     font-weight: bold;
 }
 
 tr:nth-child(even) {
-    background-color: #f9f9f9;
+    background-color: rgb(255, 221, 174);
 }
 
 tr:hover {
@@ -46,8 +51,8 @@ td, th {
 }
 
 button {
-    background-color: #0056b3;
-    color: white;
+    background-color: rgb(255, 221, 174);
+    color: rgb(0, 0, 0);
     border: none;
     padding: 8px 16px;
     border-radius: 4px;
@@ -58,25 +63,9 @@ button {
 }
 
 button:hover {
-    background-color: rgb(58, 152, 215);
+    background-color: rgb(240, 203, 152);
+    color: black;
 }
 
 
-@media (max-width: 768px) {
-    .controls-container {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 5px;
-        margin-right: 0;
-    }
 
-    table {
-        display: block; 
-        overflow-x: auto;
-    }
-
-    th, td {
-        white-space: nowrap; 
-        padding: 8px 12px;
-    }
-}

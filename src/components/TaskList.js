@@ -65,45 +65,47 @@ function TaskList({ tasks, onEdit, onDelete, onFilter, onUpdateTime }) {
                 </select>
             </div>
 
-            <table>
-                <thead>
-                    <tr>
-                        <th>Title</th>
-                        <th>Assignee</th>
-                        <th>Start Date</th>
-                        <th>Due Date</th>
-                        <th>Priority</th>
-                        <th>Status</th>
-                        <th>Time Spent</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {sortedTasks.length === 0 ? (
+            <div className="table-container">
+                <table>
+                    <thead>
                         <tr>
-                            <td colSpan="8">No tasks available.</td>
+                            <th>Title</th>
+                            <th>Assignee</th>
+                            <th>Start Date</th>
+                            <th>Due Date</th>
+                            <th>Priority</th>
+                            <th>Status</th>
+                            <th>Time Spent</th>
+                            <th>Actions</th>
                         </tr>
-                    ) : (
-                        sortedTasks.map((task) => (
-                            <tr key={task.id}>
-                                <td>{task.title}</td>
-                                <td>{task.assignee}</td>
-                                <td>{task.startDate}</td>
-                                <td>{task.dueDate}</td>
-                                <td style={{ color: getPriorityColor(task.priority) }}>{task.priority}</td>
-                                <td>{task.status}</td>
-                                <td>
-                                    <TimeTracker task={task} onUpdateTime={onUpdateTime} />
-                                </td>
-                                <td>
-                                    <button onClick={() => onEdit(task.id)}>Edit</button>
-                                    <button onClick={() => onDelete(task.id)}>Delete</button>
-                                </td>
+                    </thead>
+                    <tbody>
+                        {sortedTasks.length === 0 ? (
+                            <tr>
+                                <td colSpan="8">No tasks available.</td>
                             </tr>
-                        ))
-                    )}
-                </tbody>
-            </table>
+                        ) : (
+                            sortedTasks.map((task) => (
+                                <tr key={task.id}>
+                                    <td>{task.title}</td>
+                                    <td>{task.assignee}</td>
+                                    <td>{task.startDate}</td>
+                                    <td>{task.dueDate}</td>
+                                    <td style={{ color: getPriorityColor(task.priority) }}>{task.priority}</td>
+                                    <td>{task.status}</td>
+                                    <td>
+                                        <TimeTracker task={task} onUpdateTime={onUpdateTime} />
+                                    </td>
+                                    <td>
+                                        <button onClick={() => onEdit(task.id)}>Edit</button>
+                                        <button onClick={() => onDelete(task.id)}>Delete</button>
+                                    </td>
+                                </tr>
+                            ))
+                        )}
+                    </tbody>
+                </table>
+            </div>
         </div>
     );
 }
