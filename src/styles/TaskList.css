@@ -1,7 +1,7 @@
 .table-container {
-    overflow-x: auto; /* Enables horizontal scrolling when needed */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling for mobile devices */
-    margin-top: 15px; /* Space above the table */
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch; 
+    margin-top: 15px; 
 }
 
 .controls-container {
@@ -13,8 +13,14 @@
     gap: 10px;
 }
 
+.heading{
+    margin-left: 1rem;
+}
 .label {
     font-weight: bold;
+}
+.box{
+    border-radius: 10px;
 }
 
 table {
@@ -26,7 +32,7 @@ table {
 th, td {
     padding: 12px 20px;
     text-align: left;
-    border: 1px solid rgb(255, 221, 174);
+    border: 1px solid  rgb(0, 0, 0);
     vertical-align: middle;
 }
 
@@ -36,12 +42,8 @@ th {
     font-weight: bold;
 }
 
-tr:nth-child(even) {
-    background-color: rgb(255, 221, 174);
-}
-
 tr:hover {
-    background-color: #e6e6e6;
+    background-color:  rgb(230, 241, 244);
 }
 
 td, th {

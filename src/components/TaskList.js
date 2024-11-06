@@ -44,10 +44,10 @@ function TaskList({ tasks, onEdit, onDelete, onFilter, onUpdateTime }) {
 
     return (
         <div>
-            <h3>Task List</h3>
+            <h3 className="heading">Task List</h3>
             <div className="controls-container">
                 <label className="label">Filter by:</label>
-                <select value={filterCriteria} onChange={handleFilterChange}>
+                <select className= "box" value={filterCriteria} onChange={handleFilterChange}>
                     <option value="">All</option>
                     <option value="Low">Low Priority</option>
                     <option value="Medium">Medium Priority</option>
@@ -58,7 +58,7 @@ function TaskList({ tasks, onEdit, onDelete, onFilter, onUpdateTime }) {
                 </select>
 
                 <label className="label">Sort by:</label>
-                <select value={sortCriteria} onChange={handleSortChange}>
+                <select className="box" value={sortCriteria} onChange={handleSortChange}>
                     <option value="">None</option>
                     <option value="Priority">Priority</option>
                     <option value="Status">Status</option>

@@ -26,7 +26,7 @@ function Login({ onLogin }) {
       <h2>Login to track your tasks</h2>
       <form className="login-form" onSubmit={handleLogin}>
         <div>
-          <label>Username:</label>
+          <label className= "heading">Username:</label>
           <input
             type="text"
             value={username}
@@ -35,7 +35,7 @@ function Login({ onLogin }) {
           />
         </div>
         <div>
-          <label>Password:</label>
+          <label className="heading">Password:</label>
           <input
             type="password"
             value={password}
